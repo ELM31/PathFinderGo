@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "305109864302",
+    "project_id": "pathfindergo3000",
+    "storage_bucket": "pathfindergo3000.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:305109864302:android:2b98af4fd520d9efcabb7f",
+        "android_client_info": {
+          "package_name": "com.example.pathfindergo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPcxEAZck_l8dmCti-irvIJJTAoDBh0M4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
