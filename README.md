@@ -4,14 +4,14 @@
 
 ---
 
-##Project Overview
+## Project Overview
 **PathFinder GO** is a specialized Android utility designed for Pokémon GO players to organize, optimize, and store complex sets of GPS coordinates. Built with **Jetpack Compose** and **Firebase**, the app allows users to bulk-paste raw coordinate data, which the app then parses and reorders using a **Nearest Neighbor optimization algorithm** to create the most efficient walking path. 
 
 The app follows the **MVVM (Model-View-ViewModel)** architecture, ensuring a clean separation between the Firebase cloud data layer and the modern Material 3 user interface.
 
 ---
 
-##App Layout
+## App Layout
 The application consists of 9 distinct functional screens/states to provide a full CRUD (Create, Read, Update, Delete) experience:
 
 1. **Login Screen:** Secure entry point using Firebase Authentication.
@@ -26,7 +26,7 @@ The application consists of 9 distinct functional screens/states to provide a fu
 
 ---
 
-##Core Functionalities & Key Architectural Concepts
+## Core Functionalities & Key Architectural Concepts
 
 | Feature | Implementation Concept |
 | :--- | :--- |
@@ -38,7 +38,7 @@ The application consists of 9 distinct functional screens/states to provide a fu
 
 ---
 
-##Technical Highlights: The "Engine"
+## Technical Highlights: The "Engine"
 
 ### 1. Path Optimization Algorithm
 To prevent "zigzagging" paths, the app processes raw coordinates using a Nearest Neighbor logic:
@@ -55,7 +55,7 @@ $$d = 2r \arcsin\left(\sqrt{\sin^2\left(\frac{\Delta\phi}{2}\right) + \cos\phi_1
 
 ---
 
-##File Overview
+## File Overview
 
 ### Data Layer
 * **`RouteRepository.kt`**: Handles all Firestore operations (Get/Save/Delete).
@@ -70,7 +70,7 @@ $$d = 2r \arcsin\left(\sqrt{\sin^2\left(\frac{\Delta\phi}{2}\right) + \cos\phi_1
 
 ---
 
-##Functions and Concepts Used
+## Functions and Concepts Used
 * **Jetpack Compose:** Declarative UI for a highly responsive user experience.
 * **Kotlin Coroutines:** Used for non-blocking database and network calls.
 * **StateFlow:** Reactive state management to ensure the UI updates instantly.
