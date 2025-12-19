@@ -8,36 +8,18 @@
 ## Project Overview
 **PathFinder GO** is a specialized Android utility designed for Pokémon GO players to organize, optimize, and store complex sets of GPS coordinates. Built with **Jetpack Compose** and **Firebase**, the app allows users to bulk-paste raw coordinate data, which the app then parses and reorders using a **Nearest Neighbor optimization algorithm** to create the most efficient walking path. 
 
-The app follows the **MVVM (Model-View-ViewModel)** architecture, ensuring a clean separation between the Firebase cloud data layer and the modern Material 3 user interface.
-
----
-
-## Project Setup Guide
-To run this project locally, follow these steps:
-
-1. **Clone the Repository:**
-   `git clone [Your GitHub URL]`
-2. **Firebase Configuration:**
-   - Create a new project in the [Firebase Console](https://console.firebase.google.com/).
-   - Enable **Email/Password Authentication**.
-   - Enable **Cloud Firestore** (Start in Test Mode).
-   - Register the Android app using the package name `com.example.pathfindergo`.
-   - Download the `google-services.json` file and place it in the `app/` directory of the project.
-3. **Build & Run:**
-   - Open the project in **Android Studio Ladybug** (or newer).
-   - Sync Project with Gradle Files.
-   - Run on an Emulator or Physical Device (API 31+ recommended).
+The app follows the **MVVM (Model-View-ViewModel)** architecture, ensuring a clean separation between the Firebase cloud data layer.
 
 ---
 
 ## App Layout (9 Functional Screens)
 This app meets the requirement of 6-8 screens by providing:
 1. **Login Screen:** Secure entry point with Firebase Auth.
-2. **Sign-Up Screen:** Account creation with real-time password/email validation.
-3. **Dashboard (Home):** High-level summary of user stats.
-4. **Create Route Screen:** Bulk-input utility with optimization engine.
+2. **Sign-Up Screen:** Account creation with password/email validation.
+3. **Dashboard (Home):** Summary of user stats.
+4. **Create Route Screen:** input utility with optimization engine.
 5. **Route Library Screen:** List of all saved routes with sorting logic.
-6. **Search/Filter View:** Integrated real-time query logic.
+6. **Search/Filter View:** Integrated query logic.
 7. **Route Detail Screen:** Viewing waypoint lists and "Copy to Clipboard" utility.
 8. **Edit Screen:** Update functionality for existing route metadata.
 9. **Profile/Settings:** User management and secure Sign Out.
@@ -75,7 +57,49 @@ $$d = 2r \arcsin\left(\sqrt{\sin^2\left(\frac{\Delta\phi}{2}\right) + \cos\phi_1
 
 ---
 
-## 📂 Project Structure & Organization
+## Screenshots
+
+1. Login Page
+<img width="408" height="908" alt="image" src="https://github.com/user-attachments/assets/9661ca01-e302-45f5-9fb2-b4a40035d0ce" />
+
+2. Signup Page
+<img width="409" height="908" alt="image" src="https://github.com/user-attachments/assets/3db69150-ede6-45c5-848d-46e5a942d4e2" />
+
+3. Dashboard
+<img width="408" height="902" alt="image" src="https://github.com/user-attachments/assets/45568851-b621-43d1-b872-33b777c3afc1" />
+
+4. Create Route view
+<img width="407" height="907" alt="image" src="https://github.com/user-attachments/assets/c68d2754-d296-47cf-b8fa-4448bec49982" />
+
+5. Route Library
+<img width="408" height="911" alt="image" src="https://github.com/user-attachments/assets/e73f076e-c5d4-449e-b193-b0bf3ddc13c3" />
+
+6. Search Screen 
+<img width="406" height="591" alt="image" src="https://github.com/user-attachments/assets/81d41b1c-80fb-4929-a779-03037b1d4d8b" />
+
+7. Route Detail View
+<img width="407" height="799" alt="image" src="https://github.com/user-attachments/assets/f0a353ad-46d2-49af-819c-bdbecfe8cec1" />
+
+8. Edit Route View
+<img width="408" height="349" alt="image" src="https://github.com/user-attachments/assets/f2735992-cb4d-4000-ab0a-1d6d788ba64f" />
+
+9. Profile Settings
+<img width="408" height="907" alt="image" src="https://github.com/user-attachments/assets/bb31ac19-a292-4745-8507-8a62ab9c7a1e" />
+
+---
+
+## Optimzation Example 
+
+Downtown Los Angeles - uneditted
+<img width="408" height="338" alt="image" src="https://github.com/user-attachments/assets/ec31b951-76d6-4b99-9544-181da7161f1f" />
+
+
+Downtown Los Angeles - optimized
+<img width="409" height="348" alt="image" src="https://github.com/user-attachments/assets/4810ec00-2d09-480f-beea-4e570961aab1" />
+
+---
+
+## Project Structure & Organization
 The project follows a modular package-by-feature structure to ensure high maintainability and clear separation of concerns:
 
 ```text
